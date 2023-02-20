@@ -14,6 +14,10 @@ def main():
     print('Here are some animals and')
     print('the sounds they make.')
     print('--------------------------')
+    show_mammal_info(mammal)
+    show_mammal_info(dog)
+    show_mammal_info(cat)
+    '''
     mammal.show_species()
     mammal.make_sound()
 
@@ -26,6 +30,14 @@ def main():
 
     cat.show_species()
     cat.make_sound()
+    '''
+
+def show_mammal_info(creature):
+    if isinstance(creature, animals.Mammal):
+        creature.show_species()
+        creature.make_sound()
+    else:
+        show_mammal_info()
 
 # Call the main function.
 main()
